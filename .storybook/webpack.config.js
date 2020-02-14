@@ -1,19 +1,7 @@
-const path = require("path");
-
-module.exports = function({ config, mode }) {
+module.exports = function({ config }) {
   config.module.rules.push({
     test: /\.less$/,
-    use: [
-      {
-        loader: "style-loader"
-      },
-      {
-        loader: "css-loader"
-      },
-      {
-        loader: "less-loader"
-      }
-    ]
+    use: ["style-loader", "css-loader", "less-loader"]
   });
   return config;
 };
